@@ -20,9 +20,9 @@ body {
     --border-thickness: 1px; /* 메인 패널 주변 테두리의 두께. 다른 테두리에는 영향을 주지 않음 */
 
     /* [수정] 동글동글한 느낌 없애기 (둥근 모서리 반으로 줄임/제거) */
-    --roundness-xl: 3px;
-    --roundness-l: 2px;
-    --roundness-m: 1px;
+    --roundness-xl: 2.8px;
+    --roundness-l: 1.8px;
+    --roundness-m: 0.8px;
     --roundness-s: 0px;
 
     /* 애니메이션/전환 효과 옵션 */
