@@ -90,9 +90,9 @@ body {
     --bg-3: hsla(24, 14%, 14%, 1); /* 간격 및 보조 요소 */
     --bg-4: hsla(24, 14%, 8%, 1);  /* 메인 배경색 */
 
-    --hover: hsla(24, 16%, 45%, 0.10);   /* Hover */
-    --active: hsla(24, 16%, 45%, 0.18);  /* Active */
-    --active-2: hsla(24, 16%, 45%, 0.25);/* Active(Transparent) */
+    --hover: hsla(24, 18%, 40%, 0.10);   /* Hover */
+    --active: hsla(24, 18%, 40%, 0.18);  /* Active */
+    --active-2: hsla(24, 18%, 40%, 0.25); /* Active(Transparent) */
     --message-hover: hsla(24, 10%, 0%, 0.15);
 
     /* 강조(포인트) 색상 */
