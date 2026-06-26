@@ -3,3 +3,9 @@
 
 # 사용법
 https://detzx.github.io/marshmallow/main/marshmallow.css를 커스텀 스킨 주소 입력창에 입력하거나, 직접 [파일](/main/marshmallow.css)를 다운로드해 사용합니다.
+
+## 미리보기
+<details>
+<summary>\> 초코향이 나는 마쉬멜로</summary>
+<img src="/main/preview.png"/>
+</details>
