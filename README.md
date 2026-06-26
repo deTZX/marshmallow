@@ -1,4 +1,4 @@
-# marshmallow
+# 마쉬멜로 (초코 향이 나는)
 이 스킨은 GitHub [refact0r/midnight-discord](https://github.com/refact0r/midnight-discord)를 기반으로 하고 있으며, TangoZuluXray(_detzx)가 변수 및 일부 스타일을 수정한 파생 버전입니다.
 
 # 사용법
