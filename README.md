@@ -1,3 +1,3 @@
 # marshmallow
 
-이 스킨은 GitHub refact0r/midnight-discord를 기반으로 제작되었으며, TangoZuluXray(_detzx)가 수정하고 있음을 알립니다.
+이 스킨은 GitHub refact0r/midnight-discord를 기반으로 하고 있으며, TangoZuluXray(_detzx)가 변수 및 일부 스타일을 수정한 파생 버전입니다.
