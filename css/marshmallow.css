@@ -1,0 +1,158 @@
+/**
+ * @name marshmallow
+ * @description detzx-discordskin (dark only)
+ * @author _detzx (1299732135820787752)
+ * @version 1.0.0
+ */
+
+/* 테마 모듈 가져오기 */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* 글꼴 옵션 */
+    --font: 'figtree'; /* 디스코드 기본 글꼴을 사용하려면 ''로 변경 */
+    --code-font: ''; /* 디스코드 기본 글꼴을 사용하려면 ''로 변경 */
+    font-weight: 400; /* 일반 텍스트의 글꼴 두께. 굵은 텍스트(Bold)에는 영향을 주지 않음 */
+
+    /* 크기 설정 */
+    --gap: 10px; /* 패널 사이의 간격 */
+    --divider-thickness: 4px; /* 읽지 않은 메시지 구분선 및 강조된 메시지 테두리의 두께 */
+    --border-thickness: 1px; /* 메인 패널 주변 테두리의 두께. 다른 테두리에는 영향을 주지 않음 */
+
+    /* [수정] 동글동글한 느낌 없애기 (둥근 모서리 반으로 줄임/제거) */
+    --roundness-xl: 3px;
+    --roundness-l: 2px;
+    --roundness-m: 1px;
+    --roundness-s: 0px;
+
+    /* 애니메이션/전환 효과 옵션 */
+    --animations: on; /* off: 애니메이션 비활성화, on: 애니메이션 활성화 */
+    --list-item-transition: 0.2s ease; /* 리스트 항목의 전환 속도 */
+    --dms-icon-svg-transition: 0.4s ease; /* DM 아이콘의 전환 속도 */
+    --border-hover-transition: 0.2s ease; /* 마우스를 올렸을 때(hover) 테두리의 전환 속도 */
+
+    /* 상단 바 옵션 */
+    --top-bar-height: var(--gap); /* 상단 바의 높이 (디스코드 기본값은 36px, 구버전 스타일은 24px, 버튼 위치를 타이틀바로 설정한 경우 var(--gap) 권장) */
+    --top-bar-button-position: titlebar; /* off: 기본 위치, hide: 버튼을 완전히 숨김, serverlist: 받은 편지함 버튼을 서버 목록으로 이동, titlebar: 받은 편지함 버튼을 채널 타이틀바로 이동 (제목은 숨겨짐) */
+    --top-bar-title-position: off; /* off: 기본 중앙 정렬 위치, hide: 제목을 완전히 숨김, left: 제목을 왼쪽으로 정렬 (구버전 스타일) */
+    --subtle-top-bar-title: off; /* off: 기본값, on: 아이콘을 숨기고 은은한 텍스트 색상 사용 (구버전 스타일) */
+
+    /* 창 제어 버튼 */
+    --custom-window-controls: on; /* off: 기본 창 제어 버튼, on: 커스텀 창 제어 버튼 */
+    --window-control-size: 14px; /* 커스텀 창 제어 버튼의 크기 */
+
+    /* DM 버튼 옵션 */
+    --custom-dms-icon: off; /* off: 디스코드 기본 아이콘 사용, hide: 아이콘을 완전히 제거, custom: 커스텀 아이콘 사용 */
+    --dms-icon-svg-url: url(''); /* 아이콘 SVG URL. 반드시 SVG 형식이어야 함. */
+    --dms-icon-svg-size: 90%; /* SVG의 크기 (CSS mask-size 속성) */
+    --dms-icon-color-before: var(--icon-subtle); /* 일반 상태의 아이콘 색상 */
+    --dms-icon-color-after: var(--white); /* 마우스를 올리거나 선택했을 때의 아이콘 색상 */
+    --custom-dms-background: off; /* off: 비활성화, image: 배경 이미지 사용(아래 URL 변수 설정 필요), color: 커스텀 색상/그라데이션 사용 */
+    --dms-background-image-url: url(''); /* 배경 이미지 URL */
+    --dms-background-image-size: cover; /* 배경 이미지 크기 (CSS background-size 속성) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* 고정 색상/그라데이션 (CSS background 속성) */
+
+    /* 배경 이미지 옵션 */
+    --background-image: off; /* off: 배경 이미지 없음, on: 배경 이미지 활성화 (아래 URL 변수 설정 필요) */
+    --background-image-url: url(''); /* 배경 이미지 URL */
+
+    /* 투명도/블러(흐림 효과) 옵션 */
+    /* 참고: 투명도나 블러를 사용하려면 배경색(BG COLOR)이 투명해야 합니다. 예: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: 변경 없음, on: 더 나은 투명 효과를 위해 일부 요소를 제거 */
+    --remove-bg-layer: off; /* off: 변경 없음, on: 창 투명화를 사용하기 위해 기본 --bg-3 레이어를 제거 (배경 이미지 설정보다 우선 적용됨) */
+    --panel-blur: off; /* off: 변경 없음, on: 패널의 배경을 흐리게 처리 */
+    --blur-amount: 12px; /* 블러(흐림) 정도 */
+    --bg-floating: var(--bg-3); /* 플로팅 패널이 너무 투명해 보일 경우 더 불투명한 색상으로 설정. 패널 블러가 켜져 있을 때만 적용됨 */
+
+    /* 채팅바 옵션 */
+    --custom-chatbar: off; /* off: 기본 채팅바, separated: 채팅창과 분리된 채팅바 */
+    --chatbar-height: 47px; /* 채팅바의 높이 (기본값은 56px, 사용자 패널과 맞추려면 47px, 분리형(separated)인 경우 56px 권장) */
+
+    /* 기타 옵션 */
+    --small-user-panel: on; /* off: 기본 사용자 패널, on: 구버전 디스코드 같은 작은 사용자 패널 */
+}
+
+/* 색상 옵션 */
+:root {
+    --colors: on; /* off: 디스코드 기본 색상, on: 미드나잇 커스텀 색상 */
+
+    /* 텍스트 색상 (기본 Discord 느낌 + 약간의 웜톤) */
+    --text-0: var(--bg-4);
+    --text-1: hsl(220, 6%, 93%);
+    --text-2: hsl(220, 6%, 85%);
+    --text-3: hsl(220, 5%, 78%);
+    --text-4: hsl(220, 5%, 58%);
+    --text-5: hsl(220, 4%, 38%);
+
+    /* 배경 색상 (기본 Discord보다 약 3% 따뜻하게) */
+    --bg-1: hsla(220, 6%, 20%, 1);
+    --bg-2: hsla(220, 6%, 15%, 1);
+    --bg-3: hsla(220, 6%, 12%, 1);
+    --bg-4: hsla(220, 6%, 8%, 1);
+
+    --hover: hsla(220, 6%, 45%, 0.10);
+    --active: hsla(220, 6%, 45%, 0.18);
+    --active-2: hsla(220, 6%, 45%, 0.25);
+    --message-hover: hsla(0, 0%, 0%, 0.15);
+
+    /* 강조(포인트) 색상 */
+    --accent-1: var(--blue-1); /* 링크 및 기타 강조 텍스트 */
+    --accent-2: var(--blue-2); /* 작은 강조 요소 */
+    --accent-3: var(--blue-3); /* 강조 버튼 */
+    --accent-4: var(--blue-4); /* 강조 버튼에 마우스를 올렸을 때 */
+    --accent-5: var(--blue-5); /* 강조 버튼을 클릭했을 때 */
+    --accent-new: var(--accent-2); /* 보통 빨간색으로 표시되는 음소거/헤드셋 비활성화 버튼 등의 요소 */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* 나를 멘션한 메시지의 배경 */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* 나를 멘션한 메시지에 마우스를 올렸을 때의 배경 */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* 나에게 답장한 메시지의 배경 */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* 나에게 답장한 메시지에 마우스를 올렸을 때의 배경 */
+
+    /* 상태 표시기 색상 */
+    --online: var(--green-2); /* 디스코드 기본값으로 바꾸려면 #40a258 */
+    --dnd: var(--red-2); /* 디스코드 기본값으로 바꾸려면 #d83a41 */
+    --idle: var(--yellow-2); /* 디스코드 기본값으로 바꾸려면 #cc954c */
+    --streaming: var(--purple-2); /* 디스코드 기본값으로 바꾸려면 #9147ff */
+    --offline: var(--text-4); /* 디스코드 기본 오프라인 색상으로 바꾸려면 #82838b */
+
+    /* 테두리 색상 */
+    --border-light: var(--hover); /* 일반적인 밝은 테두리 색상 */
+    --border: var(--active); /* 일반적인 보통 테두리 색상 */
+    --border-hover: var(--active); /* 패널에 마우스를 올렸을 때의 테두리 색상 */
+    --button-border: hsl(210, 0%, 100%, 0.08); /* 버튼의 중립적인 테두리 색상 */
+
+    /* [수정] 포인트 컬러인 블루 계열 색상도 쨍한 파란색에서 약간 톤 다운된 슬레이트/차분한 블루로 변경 */
+    --red-1: oklch(75% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(65% 0.12 0);
+    --red-4: oklch(60% 0.12 0);
+    --red-5: oklch(55% 0.12 0);
+
+    --green-1: oklch(75% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(65% 0.11 170);
+    --green-4: oklch(60% 0.11 170);
+    --green-5: oklch(55% 0.11 160);
+
+    --blue-1: oklch(72% 0.06 220);
+    --blue-2: oklch(67% 0.06 220);
+    --blue-3: oklch(62% 0.06 220);
+    --blue-4: oklch(57% 0.06 220);
+    --blue-5: oklch(52% 0.06 220);
+
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(75% 0.11 90);
+    --yellow-3: oklch(70% 0.11 90);
+    --yellow-4: oklch(65% 0.11 90);
+    --yellow-5: oklch(60% 0.11 90);
+
+    --purple-1: oklch(75% 0.11 310);
+    --purple-2: oklch(70% 0.11 310);
+    --purple-3: oklch(65% 0.11 310);
+    --purple-4: oklch(60% 0.11 310);
+    --purple-5: oklch(55% 0.11 310);
+}
+
+/* 단, 서버 아이콘 등 둥글어야 예쁜 일부 요소는 최소한의 라운딩 유지 */
+.wrapper_c5f96e, .avatar_c5f96e, .mask_c5f96e {
+    border-radius: var(--roundness-m) !important;
+}
