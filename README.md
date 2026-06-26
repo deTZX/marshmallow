@@ -6,6 +6,6 @@ https://detzx.github.io/marshmallow/main/marshmallow.css를 커스텀 스킨 주
 
 ## 미리보기
 <details>
-<summary>\> 초코향이 나는 마쉬멜로</summary>
+<summary>🍫 초코향이 나는 마쉬멜로</summary>
 <img src="/main/preview.png"/>
 </details>
