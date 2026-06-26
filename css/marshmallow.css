@@ -94,11 +94,6 @@ body {
     --active: hsla(24, 18%, 40%, 0.18);  /* Active */
     --active-2: hsla(24, 18%, 40%, 0.25); /* Active(Transparent) */
     --message-hover: hsla(24, 10%, 0%, 0.15);
-    
-    /* 브랜드 컬러 */
-    --brand-500: hsl(26, 24%, 42%);
-    --brand-560: hsl(26, 26%, 46%);
-    --brand-600: hsl(26, 28%, 50%);
 
     /* 강조(포인트) 색상 */
     --accent-1: var(--blue-1); /* 링크 및 기타 강조 텍스트 */
